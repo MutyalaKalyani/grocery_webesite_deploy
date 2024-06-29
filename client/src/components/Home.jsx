@@ -23,7 +23,7 @@ const func=(e)=>{
 }
 function filterBySearch()
   {
-    const dupdate = Tempproducts.filter(product=>product.name.toLowerCase().includes(searchkey))
+    const dupdate = Tempproducts.filter(product=>product.name.toLowerCase().includes(searchkey.toLowerCase()))
     setProducts(dupdate)
   }
 
