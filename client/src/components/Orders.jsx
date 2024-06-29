@@ -16,6 +16,8 @@ const Orders = () => {
   return (
     <div className="container-fluid mt-5">
       <h1 className='text-center'>Order History</h1>
+       {Orders.length>0 ?
+      
       <table class="table table-success table-striped">
         <thead>
           <tr class="table-success">
@@ -51,7 +53,7 @@ const Orders = () => {
             )
         })}
         </tbody>
-      </table>
+      </table>:<div className='d-flex justify-content-center mt-5 text-secondary'>No Orders</div>}
     </div>
   )
 }
