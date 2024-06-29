@@ -45,7 +45,7 @@
       "last 1 firefox version",
       "last 1 safari version"
     ],
-    "proxy":"https://grocery-delivery-webesite.onrender.com",
+    "proxy":"https://grocery-webesite-deploy.onrender.com",
     "description": "",
     "main": "index.js",
     "author": "",
