@@ -45,7 +45,7 @@
       "last 1 firefox version",
       "last 1 safari version"
     ],
-    "proxy":"https://mern-deploy-fn3u.onrender.com/",
+    "proxy":"https://grocery-delivery-webesite.onrender.com",
     "description": "",
     "main": "index.js",
     "author": "",
