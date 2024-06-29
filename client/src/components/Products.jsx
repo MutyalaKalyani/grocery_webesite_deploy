@@ -32,13 +32,6 @@ const Products = () => {
   const AddProduct=()=>{
      setAdd(add=>!add)
   }
-    useEffect(()=>{
-    const func=async()=>{
-      const Product=await axios.get("https://grocery-webesite-deploy.onrender.com/products/getallproducts")
-      setProducts(Product.data)
-    }
-    func()
-  },[])
   const Submithandle=async(e)=>{
     e.preventDefault();
     if(product.name.length>0){
