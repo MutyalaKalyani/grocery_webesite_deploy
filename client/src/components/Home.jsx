@@ -52,37 +52,38 @@ function filterBySearch()
    
   }
 return (
+  <div class="container row row-cols-auto mx-auto"><div className="col-md-4">
+  <input
+    type="text"
+    className="form-control  m-2"
+    placeholder='Search products'
+    value={searchkey}
+    onKeyUp={filterBySearch}
+    onChange={(e)=>{setsearchkey(e.target.value)}}
+  />
+</div>
+<div className="d-block col-md-4">
+  <select className="form-control m-2" value={type} onChange={(e)=>{filterByType(e.target.value)}} >
+
+  <option value="all">All</option>
+    <option value="fruit">Fruit</option>
+    <option value="vegetable">Vegetable</option>
+    <option value="pulses/cereals">Pulses/cereals</option>
+    
+  </select>
+</div>
+<div className="col-md-4">
+  <select className="form-control m-2" value={status} onChange={(e)=>{filterByStatus(e.target.value)}} >
+
+  <option value="all">All</option>
+    <option value="available">In Stock</option>
+    <option value="outofstock">Out of Stock</option>
+    
+  </select>
+</div>
      
       <div class="container row row-cols-auto mx-auto" id="Home_row">
-       <div className="col-md-4">
-            <input
-              type="text"
-              className="form-control i2 m-2"
-              placeholder='Search products'
-              value={searchkey}
-              onKeyUp={filterBySearch}
-              onChange={(e)=>{setsearchkey(e.target.value)}}
-            />
-          </div>
-          <div className="d-block col-md-4">
-            <select className="form-control m-2" value={type} onChange={(e)=>{filterByType(e.target.value)}} >
-
-            <option value="all">All</option>
-              <option value="fruit">Fruit</option>
-              <option value="vegetable">Vegetable</option>
-              <option value="pulses/cereals">Pulses/cereals</option>
-              
-            </select>
-          </div>
-          <div className="d-block col-md-4">
-            <select className="form-control m-2" value={status} onChange={(e)=>{filterByStatus(e.target.value)}} >
-
-            <option value="all">All</option>
-              <option value="available">In Stock</option>
-              <option value="outofstock">Out of Stock</option>
-              
-            </select>
-          </div>
+       
       {products && products.map((e) => {
         return (
        
@@ -102,7 +103,7 @@ return (
         </div>
         );
       })}
-      </div>
+      </div></div>
   );
 };
 export default Home;

@@ -140,7 +140,7 @@ router.get('/success',async(req,res) => {
 
 router.get('/getAllorders',async(req,res)=>{
   try{
-    const orders=await Order.find();
+    const orders=await Order.find().sort({createdAt:-1});
     res.send(orders)
   }catch(error){
      res.status(400).send({message:error})

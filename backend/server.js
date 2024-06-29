@@ -101,7 +101,7 @@ const {user}=req.body
     res.send(order.orders)
 })
 
-const port = process.env.PORT;
+const port = process.env.PORT||3001;
 app.listen(port, () => {
     console.log("server is running")
 })
