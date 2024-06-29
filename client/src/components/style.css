@@ -104,3 +104,7 @@
     display: block;
     width: 100%;
   }
+
+  .signin_page_width{
+    width:25rem;
+  }

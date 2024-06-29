@@ -77,7 +77,7 @@ useEffect(()=>{
                     </Link>
                   </li>
                 </ul>
-              <li class="position-relative" style={{listStyleType:"none"}}><Link to="/cart" style={{color:"black"}}><FontAwesomeIcon icon={faShoppingCart}/><span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">{quantity}</span></Link></li> 
+                <li  style={{listStyleType:"none"}}><Link to="/cart"><FontAwesomeIcon icon={faShoppingCart} style={{color:"black"}}/><span class="top-0 start-100 translate-middle badge rounded-pill bg-danger">{quantity}</span></Link></li>
               </div>
             </div>
           ) : (

@@ -1,6 +1,7 @@
 import React, {useState } from "react";
 import { Link ,useNavigate} from "react-router-dom";
 import axios from 'axios'
+import './style.css'
 
 
 
@@ -33,8 +34,8 @@ const Navigation=useNavigate()
 
 
   return (
-    <div className="d-flex justify-content-center align-items-center vh-100" id="signup_page">
-        <div className="bg-white p-3 rounded w-25">
+    <div className="container-fluid d-flex justify-content-center align-items-center vh-100" id="signup_page">
+        <div className=" bg-white p-3 rounded signin_page_width mw-100">
             <h2 className="text-success"><center>Login</center></h2>
             <form onSubmit={handleSubmit}>
                 
