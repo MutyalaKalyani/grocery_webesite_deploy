@@ -4,7 +4,7 @@ const Users = () => {
   const [users,setUsers]=useState([])
   useEffect(()=>{
     const func=async()=>{
-      const user=await axios.get("https://mern-deploy-fn3u.onrender.com/allUsers")
+      const user=await axios.get("https://grocery-webesite-deploy.onrender.com/allUsers")
       setUsers(user.data)
 
     }

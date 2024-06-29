@@ -12,7 +12,7 @@ const Landingscreen = () => {
   const { setUser}=useContext(store)
     useEffect(()=>{
       const func=async()=>{
-          await axios.get("https://mern-deploy-fn3u.onrender.com/getUser", {
+          await axios.get("https://grocery-webesite-deploy.onrender.com/getUser", {
               headers: {
               'x-auth-token': localStorage.getItem('token')
               }

@@ -18,7 +18,7 @@ const Profile = () => {
     const editProfile=async()=>{
       let email=user.email
      
-    await axios.put("https://mern-deploy-fn3u.onrender.com/updateprofile", { Username, email, Password })
+    await axios.put("https://grocery-webesite-deploy.onrender.com/updateprofile", { Username, email, Password })
       .then(result => {
           setUser(result.data)
           localStorage.removeItem("token");

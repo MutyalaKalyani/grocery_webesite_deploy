@@ -4,7 +4,6 @@ const mongoose = require("mongoose")
 const path=require("path")
 const cors = require("cors")
 const users=require('./Models/user.js')
-const grocery=require('./Models/fruits.js')
 const db=import('./db.js')
 const jwt = require("jsonwebtoken");
 const app = express()
@@ -101,16 +100,7 @@ const {user}=req.body
     let order= await users.findOne({email:user.email})
     res.send(order.orders)
 })
-app.get("/getallproducts", async(req, res) => {
 
-    try {
-        const products = await grocery.find()
-        res.send(products)
-    } catch (error) {
-        return res.status(400).json({ message: error });
-    }
-  
-});
 const port = process.env.PORT;
 app.listen(port, () => {
     console.log("server is running")

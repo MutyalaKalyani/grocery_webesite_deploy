@@ -11,7 +11,7 @@ function Signup() {
 const navigation=useNavigate()
     const handleSubmit = async (e) => {
         e.preventDefault();
-    await axios.post("https://mern-deploy-fn3u.onrender.com/register", { name, email, password }).then(result => {
+    await axios.post("https://grocery-webesite-deploy.onrender.com/register", { name, email, password }).then(result => {
         if(result.data==="User exists"){
             setAlert(true)
             setSuccess(false)

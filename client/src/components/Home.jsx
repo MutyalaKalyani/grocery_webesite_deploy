@@ -11,7 +11,7 @@ const Home = () => {
 
   useEffect(() => {
     const getData = async () => {
-      await fetch("https://mern-deploy-fn3u.onrender.com/products/getallproducts")
+      await fetch("https://grocery-webesite-deploy.onrender.com/products/getallproducts")
         .then((response) => response.json())
         .then((data) => {settempProducts(data); setProducts(data)});
     };

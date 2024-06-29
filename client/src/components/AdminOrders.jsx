@@ -7,13 +7,13 @@ const AdminOrders = () => {
   const [confirm,setConfirm]=useState(false)
   useEffect(()=>{
     const func=async()=>{
-      const orders=await axios.get("https://mern-deploy-fn3u.onrender.com/orders/getAllorders")
+      const orders=await axios.get("https://grocery-webesite-deploy.onrender.com/orders/getAllorders")
       setOrders(orders.data)
     }
     func()
   },[confirm])
   const update=async(id)=>{
-   const order= await axios.put("https://mern-deploy-fn3u.onrender.com/orders/updateOrder",{id})
+   const order= await axios.put("https://grocery-webesite-deploy.onrender.com/orders/updateOrder",{id})
    if(order.data==="success"){
     setConfirm(true)
     setTimeout(()=>{

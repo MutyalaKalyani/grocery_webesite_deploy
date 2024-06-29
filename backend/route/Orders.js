@@ -90,8 +90,8 @@ router.post("/order_payment",async (req, res) => {
       allowed_countries: ["IN"],
     },
     customer: customer.id,
-    success_url:"https://mern-deploy-fn3u.onrender.com/orders/success/?session_id={CHECKOUT_SESSION_ID}",
-    cancel_url: "https://grocery-delivery-zy0c.onrender.com/cancel",
+    success_url:"https://grocery-webesite-deploy.onrender.com/orders/success/?session_id={CHECKOUT_SESSION_ID}",
+    cancel_url: `${process.env.BASE_URL}/cancel`,
   });
   
   res.json({ id: session.id });
@@ -122,7 +122,7 @@ router.get('/success',async(req,res) => {
      const user = await users.findOne({email: customer.metadata.email});
      await user.orders.push(newOrder);
      user.save();
-    res.redirect("https://grocery-delivery-zy0c.onrender.com/success")
+    res.redirect(`${process.env.BASE_URL}/success`)
 
 
 });

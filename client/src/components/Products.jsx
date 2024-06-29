@@ -24,7 +24,7 @@ const Products = () => {
   }
   useEffect(() => {
     const getData = async () => {
-     const result= await axios.get("https://mern-deploy-fn3u.onrender.com/products/getallproducts")
+     const result= await axios.get("https://grocery-webesite-deploy.onrender.com/products/getallproducts")
        setProducts(result.data)
     };
     getData();
@@ -34,7 +34,7 @@ const Products = () => {
   }
     useEffect(()=>{
     const func=async()=>{
-      const Product=await axios.get("https://mern-deploy-fn3u.onrender.com/products/getallproducts")
+      const Product=await axios.get("https://grocery-webesite-deploy.onrender.com/products/getallproducts")
       setProducts(Product.data)
     }
     func()
@@ -42,7 +42,7 @@ const Products = () => {
   const Submithandle=async(e)=>{
     e.preventDefault();
     if(product.name.length>0){
-     const result=await axios.post("https://mern-deploy-fn3u.onrender.com/products/add",product);
+     const result=await axios.post("https://grocery-webesite-deploy.onrender.com/products/add",product);
      setAlert(false)
      if(result.data==='success'){
       setSuccess(true)
@@ -59,7 +59,7 @@ const Products = () => {
 
   }
   const update=async(id)=>{
-     const result=await axios.post("https://mern-deploy-fn3u.onrender.com/products/deleteProduct",{id})
+     const result=await axios.post("https://grocery-webesite-deploy.onrender.com/products/deleteProduct",{id})
      if(result.data==="Product Deleted Successfully")
       {
         setSuccess(true)

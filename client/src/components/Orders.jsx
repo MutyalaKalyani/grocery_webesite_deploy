@@ -8,7 +8,7 @@ const Orders = () => {
   const [Orders,setOrders]=useState([])
   useEffect(()=>{
     const func=async()=>{
-      const orders=await axios.post("https://mern-deploy-fn3u.onrender.com/userOrders",{user})
+      const orders=await axios.post("https://grocery-webesite-deploy.onrender.com/userOrders",{user})
       setOrders(orders.data)
     }
     func()

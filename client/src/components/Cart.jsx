@@ -39,7 +39,7 @@ const Cart = () => {
         else{
           setAlert(false)
           const stripe = await loadStripe("pk_test_51OpszFSB63zQKciP0t9jOn01V1UdEflESkoUP2gYkJ9zKP1iAspW0438ehb7ujxTybgXMCvmga99A6j8BP9iYS3200ySMi30H6");
-         const response = await axios.post("https://mern-deploy-fn3u.onrender.com/orders/order_payment" , {cart,user})
+         const response = await axios.post("https://grocery-webesite-deploy.onrender.com/orders/order_payment" , {cart,user})
          
          const result =await stripe.redirectToCheckout({
              sessionId:response.data.id
