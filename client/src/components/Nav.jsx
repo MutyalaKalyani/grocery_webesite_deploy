@@ -77,7 +77,7 @@ useEffect(()=>{
                     </Link>
                   </li>
                 </ul>
-                <li  style={{listStyleType:"none"}}><Link to="/cart"><FontAwesomeIcon icon={faShoppingCart} style={{color:"black"}}/><span class="top-0 start-100 translate-middle badge rounded-pill bg-danger">{quantity}</span></Link></li>
+                <li  className="position-relative" style={{listStyleType:"none"}}><Link to="/cart"><FontAwesomeIcon icon={faShoppingCart} style={{color:"black"}}/><span class="top-0 start-100 translate-middle badge rounded-pill bg-danger">{quantity}</span></Link></li>
               </div>
             </div>
           ) : (
@@ -115,7 +115,7 @@ useEffect(()=>{
                 </li>
              
               </ul>
- <li  style={{listStyleType:"none"}}><Link to="/cart"><FontAwesomeIcon icon={faShoppingCart} style={{color:"black"}}/><span class="top-0 start-100 translate-middle badge rounded-pill bg-danger">{quantity}</span></Link></li>
+ <li  className="position-relative" style={{listStyleType:"none"}}><Link to="/cart"><FontAwesomeIcon icon={faShoppingCart} style={{color:"black"}}/><span class="top-0 start-100 translate-middle badge rounded-pill bg-danger">{quantity}</span></Link></li>
        </div>
        )}
           

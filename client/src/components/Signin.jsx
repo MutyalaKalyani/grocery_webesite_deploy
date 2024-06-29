@@ -35,7 +35,7 @@ const Navigation=useNavigate()
 
   return (
     <div className="container-fluid d-flex justify-content-center align-items-center vh-100" id="signup_page">
-        <div className=" bg-white p-3 rounded signin_page_width mw-100">
+        <div className=" bg-white p-3 rounded  mw-50" id="signin_page_width">
             <h2 className="text-success"><center>Login</center></h2>
             <form onSubmit={handleSubmit}>
                 

@@ -105,6 +105,7 @@
     width: 100%;
   }
 
-  .signin_page_width{
+  #signin_page_width{
     width:25rem;
+    min-width: 15rem;
   }
