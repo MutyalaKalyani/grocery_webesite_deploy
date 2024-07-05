@@ -30,26 +30,48 @@ function filterBySearch()
   function filterByType(e)
   {
     settype(e)
-    if(e.toLowerCase()!=='all'){
-      const dupdate = Tempproducts.filter(product=>product.type.toLowerCase()===(e.toLowerCase()))
-      setProducts(dupdate)
-    }
-    else{
-      setProducts(Tempproducts)
-    }
-   
+    if(e.toLowerCase()==='all' && status.toLowerCase()==='all')
+      {
+         setProducts(Tempproducts)
+      }
+      else if(e.toLowerCase()==='all' && status.toLowerCase()!=='all')
+        {
+          const dupdate1 = Tempproducts.filter(product=>product.status.toLowerCase()===(status.toLowerCase()))
+          setProducts(dupdate1)
+        }
+        else if(e.toLowerCase()!=='all' && status.toLowerCase()==='all')
+          {
+            const dupdate = Tempproducts.filter(product=>product.type.toLowerCase()===(e.toLowerCase()))
+            setProducts(dupdate)
+          }
+      else{
+        const dupdate = Tempproducts.filter(product=>product.type.toLowerCase()===(e.toLowerCase()))
+        const dupdate1 = dupdate.filter(product=>product.status.toLowerCase()===(status.toLowerCase()))
+        setProducts(dupdate1)
+      }
   }
   function filterByStatus(e)
   {
     setStatus(e)
-    if(e.toLowerCase()!=='all'){
-      const dupdate1 = Tempproducts.filter(product=>product.status.toLowerCase()===(e.toLowerCase()))
-      setProducts(dupdate1)
-    }
-    else{
-      setProducts(Tempproducts)
-    }
-   
+    if(type.toLowerCase()==='all' && e.toLowerCase()==='all')
+      {
+         setProducts(Tempproducts)
+      }
+      else if(type.toLowerCase()==='all' && e.toLowerCase()!=='all')
+        {
+          const dupdate1 = Tempproducts.filter(product=>product.status.toLowerCase()===(e.toLowerCase()))
+          setProducts(dupdate1)
+        }
+        else if(type.toLowerCase()!=='all' && e.toLowerCase()==='all')
+          {
+            const dupdate = Tempproducts.filter(product=>product.type.toLowerCase()===(type.toLowerCase()))
+            setProducts(dupdate)
+          }
+      else{
+        const dupdate = Tempproducts.filter(product=>product.type.toLowerCase()===(type.toLowerCase()))
+        const dupdate1 = dupdate.filter(product=>product.status.toLowerCase()===(e.toLowerCase()))
+        setProducts(dupdate1)
+      }
   }
 return (
   <div class="container row row-cols-auto mx-auto"><div className="col-md-4">
